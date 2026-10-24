@@ -1,0 +1,813 @@
+[
+  {
+    "id": "web-browser",
+    "name": "Web browser",
+    "requirements": {
+      "minimum": {
+        "memory_gb": null,
+        "storage_gb": null,
+        "cpu_mhz": null
+      },
+      "recommended": {
+        "memory_gb": null,
+        "cpu_mhz": null
+      },
+      "sources": [
+        {
+          "url": "https://www.firefox.com/en-US/firefox/158.0.1/system-requirements/",
+          "checked_on": "2026-10-24",
+          "note": "Firefox Linux upstream lists required libraries but no numeric RAM, disk-space or MHz minimum. Windows/macOS recommended figures must not be applied as Linux minimums. Distribution builds can have different requirements."
+        }
+      ]
+    },
+    "availability": {
+      "debian": {
+        "status": "native",
+        "implementation": "Firefox / Firefox ESR",
+        "source": {
+          "url": "https://packages.debian.org/trixie/firefox-esr",
+          "checked_on": "2026-10-24",
+          "note": "Native package listed by the distribution; availability is not a runtime performance guarantee."
+        },
+        "notes": [
+          "Dependencies, display, codecs, documents, and workload-specific needs still require checking."
+        ]
+      },
+      "linux-mint": {
+        "status": "native",
+        "implementation": "Firefox / Firefox ESR",
+        "source": {
+          "url": "https://community.linuxmint.com/software/view/firefox",
+          "checked_on": "2026-10-24",
+          "note": "Native package listed by the distribution; availability is not a runtime performance guarantee."
+        },
+        "notes": [
+          "Dependencies, display, codecs, documents, and workload-specific needs still require checking."
+        ]
+      },
+      "fedora": {
+        "status": "native",
+        "implementation": "Firefox",
+        "source": {
+          "url": "https://packages.fedoraproject.org/pkgs/firefox/firefox/",
+          "checked_on": "2026-10-24",
+          "note": "Official Fedora package listing; availability does not certify workloads or performance."
+        },
+        "notes": [
+          "Check release-specific dependencies and workload requirements."
+        ]
+      }
+    }
+  },
+  {
+    "id": "office",
+    "name": "Office documents (LibreOffice)",
+    "requirements": {
+      "minimum": {
+        "memory_gb": 0.256,
+        "storage_gb": 1.55,
+        "cpu_mhz": null
+      },
+      "recommended": {
+        "memory_gb": 0.512,
+        "cpu_mhz": null
+      },
+      "sources": [
+        {
+          "url": "https://www.libreoffice.org/system-requirements/",
+          "checked_on": "2026-10-24",
+          "note": "Linux resource guidance; prefer distribution builds. Upstream TDF builds have additional CPU/runtime/display requirements."
+        }
+      ]
+    },
+    "availability": {
+      "debian": {
+        "status": "native",
+        "implementation": "LibreOffice",
+        "source": {
+          "url": "https://packages.debian.org/trixie/libreoffice",
+          "checked_on": "2026-10-24",
+          "note": "Native package listed by the distribution; availability is not a runtime performance guarantee."
+        },
+        "notes": [
+          "Dependencies, display, codecs, documents, and workload-specific needs still require checking."
+        ]
+      },
+      "linux-mint": {
+        "status": "native",
+        "implementation": "LibreOffice",
+        "source": {
+          "url": "https://community.linuxmint.com/software/view/libreoffice",
+          "checked_on": "2026-10-24",
+          "note": "Native package listed by the distribution; availability is not a runtime performance guarantee."
+        },
+        "notes": [
+          "Dependencies, display, codecs, documents, and workload-specific needs still require checking."
+        ]
+      },
+      "fedora": {
+        "status": "native",
+        "implementation": "LibreOffice",
+        "source": {
+          "url": "https://packages.fedoraproject.org/pkgs/libreoffice/libreoffice/",
+          "checked_on": "2026-10-24",
+          "note": "Official Fedora package listing; availability does not certify workloads or performance."
+        },
+        "notes": [
+          "Check release-specific dependencies and workload requirements."
+        ]
+      }
+    }
+  },
+  {
+    "id": "code-editor",
+    "name": "Code editor (Visual Studio Code)",
+    "requirements": {
+      "minimum": {
+        "memory_gb": null,
+        "storage_gb": null,
+        "cpu_mhz": null
+      },
+      "recommended": {
+        "memory_gb": 1,
+        "cpu_mhz": 1600
+      },
+      "sources": [
+        {
+          "url": "https://code.visualstudio.com/docs/supporting/requirements",
+          "checked_on": "2026-10-24",
+          "note": "Recommended RAM/CPU, not hard minimums; Linux runtime dependencies also apply."
+        }
+      ]
+    },
+    "availability": {
+      "debian": {
+        "status": "native",
+        "implementation": "Visual Studio Code",
+        "source": {
+          "url": "https://code.visualstudio.com/docs/setup/linux",
+          "checked_on": "2026-10-24",
+          "note": "Official Debian/Ubuntu package instructions."
+        },
+        "notes": [
+          "Third-party package; extensions may add requirements."
+        ]
+      }
+    }
+  },
+  {
+    "id": "media-player",
+    "name": "Media player (VLC)",
+    "requirements": {
+      "minimum": {
+        "memory_gb": null,
+        "storage_gb": null,
+        "cpu_mhz": null
+      },
+      "recommended": {
+        "memory_gb": null,
+        "cpu_mhz": null
+      },
+      "sources": []
+    },
+    "availability": {
+      "debian": {
+        "status": "native",
+        "implementation": "VLC",
+        "source": {
+          "url": "https://packages.debian.org/trixie/vlc",
+          "checked_on": "2026-10-24",
+          "note": "Native package listed by the distribution; availability is not a runtime performance guarantee."
+        },
+        "notes": [
+          "Dependencies, display, codecs, documents, and workload-specific needs still require checking."
+        ]
+      },
+      "linux-mint": {
+        "status": "native",
+        "implementation": "VLC",
+        "source": {
+          "url": "https://community.linuxmint.com/software/view/vlc",
+          "checked_on": "2026-10-24",
+          "note": "Native package listed by the distribution; availability is not a runtime performance guarantee."
+        },
+        "notes": [
+          "Dependencies, display, codecs, documents, and workload-specific needs still require checking."
+        ]
+      }
+    }
+  },
+  {
+    "id": "photoshop",
+    "name": "Adobe Photoshop desktop (required)",
+    "requirements": {
+      "minimum": {
+        "memory_gb": null,
+        "storage_gb": null,
+        "cpu_mhz": null
+      },
+      "recommended": {
+        "memory_gb": null,
+        "cpu_mhz": null
+      },
+      "sources": []
+    },
+    "availability": {
+      "linux-mint": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "debian": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "lubuntu": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "ubuntu": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "xubuntu": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "kubuntu": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "fedora": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "zorin": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "elementary": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "pop-os": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "mx-linux": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "q4os": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "bodhi": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "puppy": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "peppermint": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "bazzite": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "nobara": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "garuda": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "cachyos": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "opensuse": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "ubuntu-mate": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "linux-lite": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      },
+      "antix": {
+        "status": "unsupported",
+        "implementation": "Adobe Photoshop desktop",
+        "source": {
+          "url": "https://helpx.adobe.com/photoshop/system-requirements.html",
+          "checked_on": "2026-10-24",
+          "note": "Vendor desktop platforms are Windows and macOS; no supported native Linux desktop version."
+        },
+        "notes": [
+          "This checks the desktop application only, not web editions, Wine, or virtual machines. No substitute is silently selected."
+        ]
+      }
+    }
+  },
+  {
+    "id": "microsoft-office",
+    "name": "Microsoft Office (desktop Word, Excel, PowerPoint)",
+    "why_miss": "You may need Word, Excel or PowerPoint for work, school, or files that must look exactly right.",
+    "requirements": {
+      "minimum": {
+        "memory_gb": null,
+        "storage_gb": null,
+        "cpu_mhz": null
+      },
+      "recommended": {
+        "memory_gb": null,
+        "cpu_mhz": null
+      },
+      "sources": []
+    },
+    "availability": {
+      "linux-mint": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "debian": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "lubuntu": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "windows": {
+        "status": "native",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "macos": {
+        "status": "native",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "ubuntu": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "xubuntu": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "kubuntu": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "fedora": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "zorin": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "elementary": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "pop-os": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "mx-linux": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "q4os": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "bodhi": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "puppy": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "peppermint": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "bazzite": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "nobara": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "garuda": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "cachyos": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "opensuse": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "ubuntu-mate": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "linux-lite": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      },
+      "antix": {
+        "status": "unsupported",
+        "implementation": "Microsoft Office desktop",
+        "source": {
+          "url": "https://support.microsoft.com/en-us/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
+          "checked_on": "2026-10-24",
+          "note": "Microsoft 365 desktop requirements list Windows 11 and recent macOS versions; no native Linux desktop edition is listed. Exact Office edition and resource requirements must be checked separately."
+        },
+        "notes": [
+          "Check your exact Office edition, licence and system requirements. The browser version and LibreOffice are different choices; they are not silently substituted."
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReviveOS · Bring older computers back to life</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+<aside>
+  <a class="brand" href="#welcome"><span class="logo">↗</span> ReviveOS</a>
+  <div class="edition">THE NEXT CHAPTER FOR YOUR PC</div>
+  <nav aria-label="Main navigation">
+    <a href="#welcome">01 <span>Welcome</span></a><a href="#hardware">02 <span>Hardware Analysis</span></a>
+    <a href="#preferences">03 <span>User Preferences</span></a><a href="#recommendations">04 <span>OS Recommendations</span></a>
+    <a href="#installation">05 <span>Installation</span></a><a href="#settings">06 <span>Settings</span></a>
+    <a href="#assistant">07 <span>Local AI Assistant</span></a>
+  </nav>
+  <div class="sidebar-foot"><span class="dot"></span> Local workspace<p>Guided assistant · v0.3</p></div>
+</aside>
+<main>
+<header><span>YOUR COMPUTER. NEW POSSIBILITIES.</span><span class="badge">Local assistant</span></header>
+<section id="welcome" class="page">
+  <p class="eyebrow">LESS WASTE. MORE POSSIBILITY.</p><h1>Bring older computers<br><em>back to life.</em></h1>
+  <p class="lead">Learn what you need, test your device, explore compatible operating systems, and prepare a careful installation with permission.</p>
+  <a class="button" href="#assistant">Talk to ReviveOS ↗</a><a class="next-link" href="#preferences">Or use the questionnaire</a>
+  <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="computer"><div class="screen">↗<small>room to begin again</small></div><div class="stand"></div></div><span class="art-label">A SECOND LIFE STARTS HERE</span></div>
+  <div class="panel entry-panel">
+    <h2>Start with your current setup</h2><p id="environment-result" role="status">Checking the running environment…</p>
+    <form id="entry-form">
+      <label>Is a working OS already installed?<select name="existing_os"><option value="yes">Yes — help me from my current system</option><option value="no">No — I need a lightweight live USB</option><option value="unsure">I’m not sure</option></select></label>
+      <button>Start the guided assistant ↗</button><p id="entry-result" role="status"></p>
+    </form>
+    <p><a href="/guides/bootable" target="_blank" rel="noopener">ReviveOS live USB build instructions</a> · Build recipe supplied; no prebuilt ISO is included.</p>
+  </div>
+  <div class="section-heading"><h2>A thoughtful path forward</h2><span>Understand · Compare · Prepare</span></div>
+  <div class="cards">
+    <article><span class="step">01 / UNDERSTAND</span><h3>Start with the person</h3><p>Your comfort, everyday tasks, and essential apps come first.</p></article>
+    <article><span class="step">02 / COMPARE</span><h3>Know your options</h3><p>Real measurements and sourced requirements, with evidence gaps kept visible.</p></article>
+    <article><span class="step">03 / PREPARE</span><h3>Protect the next chapter</h3><p>Keep up to two options, back up files, and prepare a manual installation handoff.</p></article>
+  </div>
+  <p class="notice">No API keys or paid AI services. Backups and supported image downloads require explicit permission. USB writing and installation remain manual.</p>
+</section>
+<section id="hardware" class="page" hidden>
+  <p class="eyebrow">05 / TEST THE DEVICE</p><h1>Meet your machine.</h1>
+  <p class="lead">Read-only detection of the backend host. Sizes use decimal GB. System-filesystem capacity is not an installation target.</p>
+  <div class="panel"><h2>Hardware analysis</h2><button id="hardware-check">Detect hardware</button><p id="hardware-result" role="status"></p><div id="hardware-details"></div></div>
+  <div class="panel"><h2>Short, safe benchmarks</h2><p>One CPU thread and small RAM copies for about 0.2 seconds each. Read up to 8 MiB of the Python executable, with no file writes. Worker timeout: six seconds. A brief load may be noticeable.</p><p>File-read speed includes cache effects; it is not raw drive speed. Results expire after ten minutes.</p><button id="benchmark-check">Run CPU, RAM &amp; read benchmarks</button><p id="benchmark-result" role="status"></p><div id="benchmark-details"></div></div>
+  <a class="button" href="#recommendations">Next: compare OS choices →</a>
+</section>
+<section id="preferences" class="page" hidden>
+  <p class="eyebrow">01–03 / YOUR EVERYDAY</p><h1>Make it yours.</h1>
+  <p class="lead">Start with what feels familiar, then tell us what matters. Choices are saved in this browser session.</p>
+  <div class="panel">
+    <label for="os-category">Browse by focus</label>
+    <select id="os-category"><option value="all">All choices</option><option value="gaming">Gaming</option><option value="lightweight">Lightweight / browsing</option><option value="general">Everyday desktop</option><option value="development">Development</option><option value="performance">Performance-oriented</option></select>
+    <p id="os-filter-result" role="status"></p>
+  </div>
+  <form id="preferences-form" class="panel">
+    <p class="step">01 / WHAT FEELS FAMILIAR?</p>
+    <label>Operating-system comfort<select name="os_preference">
+      <option value="linux" {% if preferences.get('os_preference', 'linux') == 'linux' %}selected{% endif %}>Okay with Linux</option>
+      <option value="windows" {% if preferences.get('os_preference') == 'windows' %}selected{% endif %}>Prefer Windows — Windows choices only</option>
+      <option value="familiar" {% if preferences.get('os_preference') == 'familiar' %}selected{% endif %}>Don’t want to learn a new OS family</option>
+    </select></label>
+    <p>The current catalog covers Linux. For Windows, use <a href="https://www.microsoft.com/en-us/windows/windows-11-specifications" target="_blank" rel="noopener">Microsoft’s official compatibility checks</a>. TPM, Secure Boot, supported CPU and licensing are not verified here.</p>
+    <div class="form-grid">
+      <label>02 / Primary use<select name="usage">
+        {% for value, label in [('everyday','Everyday tasks'),('gaming','Gaming'),('office','Office'),('work','Work'),('other','Other use'),('study','Study'),('development','Development'),('media','Media')] %}
+        <option value="{{ value }}" {% if preferences.usage == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select></label>
+      <label>Linux experience<select name="experience">{% for value, label in [('beginner','Beginner'),('comfortable','Comfortable'),('advanced','Advanced')] %}<option value="{{ value }}" {% if preferences.experience == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+    </div>
+    <fieldset><legend>03 / Which applications are essential?</legend>
+      <table><thead><tr><th>App</th><th>Why you'd miss it</th></tr></thead><tbody>
+      {% for app in applications %}<tr><td><label class="check"><input type="checkbox" name="applications" value="{{ app.id }}" {% if app.id in preferences.applications %}checked{% endif %}> {{ app.name }}</label></td><td>{{ app.get('why_miss', {'web-browser': 'Your websites, email and online services.', 'office': 'Writing documents and working with spreadsheets using LibreOffice.', 'code-editor': 'Writing and editing code.', 'media-player': 'Playing music and videos.', 'photoshop': 'Editing pictures with the Photoshop tools you know.'}.get(app.id, 'A program you rely on.')) }}</td></tr>{% endfor %}
+      </tbody></table>
+    </fieldset>
+    <label>Why do you need these apps? Is anything else important?<textarea name="essential_notes" maxlength="1000" rows="3" placeholder="For example: I need Excel for work, including my existing spreadsheets. You can also list games, other programs or accessibility needs.">{{ preferences.get('essential_notes', '') }}</textarea></label>
+    <p>Free-text requirements need manual review. No substitute is silently selected for a required app.</p>
+    <button type="submit">Save preferences ↗</button><p id="preferences-result" role="status"></p>
+    <a class="next-link" href="#hardware">Next: test this computer →</a>
+  </form>
+</section>
+<section id="recommendations" class="page" hidden>
+  <p class="eyebrow">04–07 / RESEARCH, FILTER, EXPLAIN</p><h1>Find your fit.</h1>
+  <p class="lead">We compare the full catalog and show your top three choices. Options with known incompatibilities are left out. Each choice explains any checks still needed.</p>
+  <button id="recommend-check">Compare operating systems</button><p id="recommend-result" role="status"></p>
+  <div id="recommendations-list" aria-live="polite"></div>
+  <div id="shortlist-panel" class="panel" hidden>
+    <h2>Keep one or two options</h2><p>Review the evidence before keeping an option with unresolved checks. Excluded entries cannot be selected.</p>
+    <label class="check"><input type="checkbox" id="review-ack"> I understand the listed evidence gaps and will verify them before installation.</label>
+    <button id="shortlist-save">Keep selected choices</button><p id="shortlist-result" role="status"></p>
+    <a class="next-link" href="#installation">Next: backup and preparation →</a>
+  </div>
+</section>
+<section id="installation" class="page" hidden>
+  <p class="eyebrow">08–10 / PROTECT, PREPARE, HAND OFF</p><h1>A careful fresh start.</h1>
+  <p class="lead">Keep OS choices first. Protect your files, choose how to obtain the image, then create media yourself. ReviveOS never writes a USB or starts installation.</p>
+  <div class="panel">
+    <h2>Your kept choices</h2><label>Prepare this OS<select id="install-os"><option value="">Keep an OS in Recommendations first</option></select></label>
+    <p id="preparation-result" role="status"></p><div id="preparation-details"></div>
+  </div>
+  <div class="panel">
+    <p class="step">08 / BACKUP CHECKPOINT</p><h2>Protect your important files</h2>
+    <p>Choose personal files/folders and a separate physical destination drive. This creates verified ordinary file copies, not a recovery image.</p>
+    <form id="backup-preview-form">
+      <label>Source paths — one per line<textarea id="backup-sources" rows="4" placeholder="Use Browse, or enter full local paths" required></textarea></label>
+      <div class="button-row"><button type="button" data-picker="files" data-target="backup-sources">Choose files</button><button type="button" data-picker="folder" data-target="backup-sources">Choose folder</button></div>
+      <label>Mounted destination drive<select id="destination-drive"><option value="">Choose a mounted filesystem or enter a path below</option></select></label>
+      <label>Existing backup destination folder<input id="backup-destination" type="text" placeholder="Full path on your backup drive" required></label>
+      <button type="button" data-picker="folder" data-target="backup-destination">Browse destination</button>
+      <button>Preview backup — no copies yet</button>
+    </form>
+    <p id="backup-result" role="status"></p><div id="backup-preview"></div>
+    <label class="check"><input type="checkbox" id="backup-consent"> I approve copying exactly these previewed files into a new folder at this destination.</label>
+    <button id="backup-start" disabled>Copy and verify backup</button>
+    <p id="backup-task-result" role="status"></p><div id="backup-task-details"></div>
+    <form id="backup-confirm-form">
+      <label>Backup method<select id="backup-method"><option value="external">I already made a separate-drive backup myself</option><option value="reviveos">I used the completed ReviveOS backup</option></select></label>
+      <label class="check"><input type="checkbox" id="backup-inspected" required> I verified this is a separate physical drive, inspected copied files, and kept recovery media/keys separately.</label>
+      <button>Confirm inspected backup</button><p id="backup-confirm-result" role="status"></p>
+    </form>
+  </div>
+  <div class="panel">
+    <p class="step">09 / IMAGE PERMISSION</p><h2>Obtain the selected OS</h2>
+    <label>How should the image be obtained?<select id="download-method"><option value="manual">Show official download and verification instructions</option><option value="real">Download and check a supported installer</option><option value="download">Preview download steps (demo only)</option></select></label>
+    <div id="download-instructions">Keep an OS choice to see its official links.</div>
+    <div id="download-controls" hidden>
+      <p id="download-mode-note" class="notice">Demo only. These steps do not download, check, or prepare a real installer.</p>
+      <label>Existing download destination folder<input id="download-destination" type="text" placeholder="Full local path"></label>
+      <button type="button" data-picker="folder" data-target="download-destination">Browse download folder</button>
+      <label class="check"><input type="checkbox" id="download-consent"> <span id="download-consent-text">I understand this is a demo: no installer will be downloaded or verified.</span></label>
+      <button id="download-start">Preview download steps</button>
+    </div>
+    <p id="download-result" role="status"></p><div id="download-details"></div>
+    <p>A checksum match is not publisher-signature authentication. Follow the official verification guide. Downloads retain an .unverified suffix until you complete that manual check.</p>
+  </div>
+  <div class="panel">
+    <p class="step">10 / MANUAL HANDOFF</p><h2>Prepare your boot device</h2>
+    <p>Use Rufus on Windows or the OS guide. The built-in USB writer is not implemented. ReviveOS never formats a device or reboots.</p>
+    <form id="handoff-form">
+      <label>USB creation method<select id="usb-method"><option value="rufus">Rufus — Windows, manual</option><option value="manual">Official OS instructions — manual</option></select></label>
+      <label>Chosen USB model/label and capacity<input id="usb-device" type="text" minlength="3" maxlength="200" placeholder="Example: spare USB model, 32 GB" required></label>
+      <label class="check"><input id="signature-verified" type="checkbox" required> I verified the publisher’s signed checksums.</label>
+      <label class="check"><input id="media-verified" type="checkbox" required> I created and tested the installation media myself.</label>
+      <label class="check"><input id="usb-erasure-ack" type="checkbox" required> I understand media creation erases that USB and checked its identity.</label>
+      <label class="check"><input id="separate-usb" type="checkbox" required> The installer USB is separate from my backup drive.</label>
+      <label class="check"><input id="recovery-ack" type="checkbox" required> Automatic rollback is unavailable; file copies cannot restore my original OS.</label>
+      <button>Record readiness for manual handoff</button><p id="handoff-result" role="status"></p><div id="handoff-details"></div>
+    </form>
+  </div>
+</section>
+<section id="settings" class="page" hidden>
+  <p class="eyebrow">WORKSPACE</p><h1>Simple by design.</h1>
+  <div class="panel"><h2>Local development</h2><p>Loopback only · No paid AI services · No automatic installation</p><p>Preferences: browser session · Benchmark cache: ten minutes · Files copied/downloaded only with explicit consent</p><button id="health-check">Check backend connection</button><p id="health-result" role="status"></p></div>
+</section>
+<section id="assistant" class="page" hidden>
+  <p class="eyebrow">OPTIONAL / LOCAL INTELLIGENCE</p><h1>Tell us what matters.</h1>
+  <p class="lead">A small local model can help describe your needs and explain the checked results. It cannot change compatibility decisions, install anything, or run commands. No API key or paid AI service is used.</p>
+  <div class="panel"><h2>Your local model</h2><label>Model<select id="ai-model"><option value="gemma2:2b">Gemma 2B</option><option value="llama3.2:1b">Llama 3.2 1B — smaller option</option></select></label><button id="ai-status-check">Check local AI</button><p id="ai-status" role="status">Checking the local AI engine…</p>
+    <details><summary>Prepare a model if it is not already on this USB</summary><p>The AI edition includes the local runtime. Model downloads require internet and can be over a gigabyte. Once prepared, inference runs offline. Older machines may be slow or lack enough RAM; the normal questionnaire works without AI.</p><label class="check"><input id="ai-download-consent" type="checkbox"> I approve downloading the selected local model into this edition’s model store.</label><button id="ai-setup">Download selected model</button><p id="ai-setup-result" role="status"></p></details>
+  </div>
+  <div class="panel"><h2>Ask ReviveOS</h2><p>For example: “I’m new to Linux. I need office documents and web browsing.” Or ask why a particular OS needs review after comparing choices.</p><div id="ai-conversation" aria-live="polite"></div><form id="ai-chat-form"><label>Your question<textarea id="ai-question" maxlength="1500" rows="3" required placeholder="Describe what you need from this computer…"></textarea></label><button>Ask the local assistant</button></form><p id="ai-chat-result" role="status"></p><button id="ai-apply-draft" hidden>Review suggested questionnaire answers</button><p>Generated text can be mistaken. Use the sourced requirement checks when making a decision. Suggested answers are never saved automatically.</p></div>
+</section>
+<footer><span>ReviveOS</span><span>Built for a longer life.</span></footer>
+</main>
+</body>
+</html>

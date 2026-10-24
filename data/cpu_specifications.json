@@ -1,0 +1,10 @@
+[
+  {
+    "model": "Intel Core Ultra 7 258V",
+    "base_mhz": 2200,
+    "max_boost_mhz": 4800,
+    "source": "https://www.intel.com/content/www/us/en/products/sku/240957/intel-core-ultra-7-processor-258v-12m-cache-up-to-4-80-ghz/specifications.html",
+    "checked_on": "2026-10-24",
+    "note": "Intel specifies 2.2 GHz base for both core types and up to 4.8 GHz maximum turbo. This is a manufacturer rating, not an observed or sustained speed."
+  }
+]

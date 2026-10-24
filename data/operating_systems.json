@@ -1,0 +1,1037 @@
+[
+  {
+    "id": "linux-mint",
+    "name": "Linux Mint",
+    "version": "22.3",
+    "desktop": "Cinnamon",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 2,
+      "storage_gb": 20,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 4,
+      "storage_gb": 100
+    },
+    "assumptions": [
+      "Display requirement: 1024 x 768; display and GPU support are not probed."
+    ],
+    "description": "Cinnamon desktop; assess graphics and wireless support in a live session.",
+    "sources": [
+      {
+        "url": "https://blog.linuxmint.com/?p=4981",
+        "checked_on": "2026-10-24",
+        "note": "Release requirements and support through 2029."
+      },
+      {
+        "url": "https://www.linuxmint.com/edition.php?id=326",
+        "checked_on": "2026-10-24",
+        "note": "64-bit Cinnamon installation image."
+      }
+    ],
+    "categories": [
+      "general"
+    ]
+  },
+  {
+    "id": "debian",
+    "name": "Debian",
+    "version": "13 (trixie), amd64 image",
+    "desktop": "Xfce",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 1,
+      "storage_gb": 10,
+      "cpu_mhz": 1000
+    },
+    "recommended": {
+      "memory_gb": 2,
+      "storage_gb": null
+    },
+    "assumptions": [
+      "Desktop minimums assume swap and a non-live installer; not live-image RAM requirements.",
+      "Requirements are for a desktop installation, not a measured Xfce performance profile.",
+      "This record evaluates the amd64 image only; Debian also offers other architectures."
+    ],
+    "description": "Desktop minimums from the Debian installer guide, with Xfce as the chosen desktop.",
+    "sources": [
+      {
+        "url": "https://www.debian.org/releases/trixie/amd64/ch03s04.en.html",
+        "checked_on": "2026-10-24",
+        "note": "Desktop resource guidance and non-live/swap assumptions."
+      },
+      {
+        "url": "https://www.debian.org/releases/trixie/amd64/ch02s01.en.html",
+        "checked_on": "2026-10-24",
+        "note": "amd64 hardware support."
+      }
+    ],
+    "categories": [
+      "general",
+      "development"
+    ]
+  },
+  {
+    "id": "lubuntu",
+    "name": "Lubuntu",
+    "version": "24.04 LTS",
+    "desktop": "LXQt",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "assumptions": [
+      "RAM and disk minimums have not been established from the reviewed official source; manual review required."
+    ],
+    "description": "LXQt desktop; this record intentionally leaves unverified resource requirements unknown.",
+    "sources": [
+      {
+        "url": "https://manual.lubuntu.me/lts/1/1.1/retrieving_the_image.html",
+        "checked_on": "2026-10-24",
+        "note": "AMD64 image, LXQt desktop, and LTS support through 2027."
+      }
+    ],
+    "categories": [
+      "lightweight"
+    ]
+  },
+  {
+    "id": "windows",
+    "name": "Windows",
+    "version": "11",
+    "desktop": "Windows Shell",
+    "family": "Windows",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 4,
+      "storage_gb": 64,
+      "cpu_mhz": 1000
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "assumptions": [],
+    "description": "Desktop minimums from the Windows 11 installer guide, with Windows Shell",
+    "sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/windows/experience/compatibility/windows-11-system-requirements",
+        "checked_on": "2026-10-24",
+        "note": "hardware support, and minimum requirements"
+      }
+    ],
+    "additional_requirements": [
+      "Microsoft-supported 64-bit CPU or SoC with at least two cores requires manual verification.",
+      "UEFI firmware and Secure Boot capability require manual verification.",
+      "DirectX 12 / WDDM 2.0 graphics and a 720p display larger than 9 inches require manual verification.",
+      "Edition-specific internet/account requirements and a valid Windows licence require review."
+    ],
+    "tpm_min_version": "2.0",
+    "categories": [
+      "general",
+      "gaming",
+      "development"
+    ]
+  },
+  {
+    "id": "macos",
+    "name": "macOS",
+    "version": "27",
+    "desktop": "Aqua",
+    "family": "Apple",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 8,
+      "storage_gb": 64,
+      "cpu_mhz": 3600
+    },
+    "recommended": {
+      "memory_gb": 16,
+      "storage_gb": 512
+    },
+    "assumptions": [],
+    "description": "Apple products that support macOS 27 Golden Gate",
+    "sources": [
+      {
+        "url": "https://support.apple.com/en-us/127255",
+        "checked_on": "2026-10-24",
+        "note": "macOS 27 device support"
+      }
+    ],
+    "additional_requirements": [
+      "A supported Apple computer model is required; generic CPU/RAM checks do not establish macOS eligibility."
+    ]
+  },
+  {
+    "id": "ubuntu",
+    "name": "Ubuntu",
+    "version": "26.04.1 LTS",
+    "desktop": "GNOME",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": 25,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 6,
+      "storage_gb": 25
+    },
+    "categories": [
+      "general",
+      "development"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use. Desktop candidate for development workflows; verify each required tool.",
+    "sources": [
+      {
+        "url": "https://ubuntu.com/download/desktop",
+        "checked_on": "2026-10-24",
+        "note": "Publisher desktop guidance: 2 GHz dual core, 6 GB RAM and 25 GB free space. Recorded as recommended screening guidance, not a hard installation limit."
+      },
+      {
+        "url": "https://ubuntu.com/desktop/docs/en/26.04/tutorial/install-ubuntu-desktop/",
+        "checked_on": "2026-10-24",
+        "note": "Ubuntu 26.04 installation tutorial explicitly requires at least 25 GB storage. The 6 GB memory guidance remains a recommendation, not an established hard RAM minimum."
+      }
+    ],
+    "installation": {
+      "download": "https://ubuntu.com/download/desktop",
+      "verification": "https://ubuntu.com/download/desktop",
+      "installation": "https://ubuntu.com/download/desktop"
+    },
+    "additional_requirements": [
+      "Dual-core processor and current release-specific graphics requirements need verification."
+    ]
+  },
+  {
+    "id": "xubuntu",
+    "name": "Xubuntu",
+    "version": "26.04 LTS",
+    "desktop": "Xfce",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 1,
+      "storage_gb": 8.6,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 2,
+      "storage_gb": 20
+    },
+    "categories": [
+      "lightweight",
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Integrated graphics can require more RAM. Published minimums do not guarantee application performance."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory. Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://xubuntu.org/release/26.04/",
+        "checked_on": "2026-10-24",
+        "note": "Official LTS release and desktop image; version-specific numeric minimums not established in this review."
+      },
+      {
+        "url": "https://xubuntu.org/download/",
+        "checked_on": "2026-10-24",
+        "note": "Publisher download page lists minimum 1 GB RAM and 8.6 GB installation space; recommends 2 GB RAM and 20 GB space. Integrated graphics may require additional RAM. Recommended 1.5 GHz dual-core CPU is not a hard clock minimum."
+      }
+    ],
+    "installation": {
+      "download": "https://xubuntu.org/download/",
+      "verification": "https://xubuntu.org/release/26.04/",
+      "installation": "https://xubuntu.org/release/26.04/"
+    }
+  },
+  {
+    "id": "kubuntu",
+    "name": "Kubuntu",
+    "version": "26.04.1 LTS",
+    "desktop": "KDE Plasma",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://www.kubuntu.com/download/",
+        "checked_on": "2026-10-24",
+        "note": "Official Plasma 6 LTS download and support information; numeric resource minimums not established."
+      }
+    ],
+    "installation": {
+      "download": "https://www.kubuntu.com/download/",
+      "verification": "https://www.kubuntu.com/download/",
+      "installation": "https://www.kubuntu.com/download/"
+    }
+  },
+  {
+    "id": "fedora",
+    "name": "Fedora Workstation",
+    "version": "Publisher-selected stable image",
+    "desktop": "GNOME",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 4,
+      "storage_gb": 40
+    },
+    "categories": [
+      "general",
+      "development"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use. Desktop candidate for development workflows; verify each required tool.",
+    "sources": [
+      {
+        "url": "https://fedoraproject.org/workstation/download/",
+        "checked_on": "2026-10-24",
+        "note": "Official Workstation x86_64 image. Publisher recommends 4 GB RAM and 40 GB disk; these are not hard minimums."
+      }
+    ],
+    "installation": {
+      "download": "https://fedoraproject.org/workstation/download/",
+      "verification": "https://fedoraproject.org/workstation/download/",
+      "installation": "https://fedoraproject.org/workstation/download/"
+    }
+  },
+  {
+    "id": "zorin",
+    "name": "Zorin OS Core",
+    "version": "18.1",
+    "desktop": "GNOME",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 2,
+      "storage_gb": 15,
+      "cpu_mhz": 1000
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://help.zorin.com/docs/getting-started/system-requirements/",
+        "checked_on": "2026-10-24",
+        "note": "Core edition only: 1 GHz dual-core Intel/AMD 64-bit CPU, 2 GB RAM, 15 GB storage; other editions need more disk."
+      }
+    ],
+    "installation": {
+      "download": "https://zorin.com/os/",
+      "verification": "https://help.zorin.com/docs/getting-started/system-requirements/",
+      "installation": "https://help.zorin.com/docs/getting-started/system-requirements/"
+    },
+    "additional_requirements": [
+      "Dual-core CPU and display support need verification."
+    ]
+  },
+  {
+    "id": "elementary",
+    "name": "elementary OS",
+    "version": "8.1.1",
+    "desktop": "Pantheon",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 4,
+      "storage_gb": 32
+    },
+    "categories": [
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://elementary.io/docs/installation",
+        "checked_on": "2026-10-24",
+        "note": "Publisher explicitly has no strict minimums. Recommends recent Core i3/comparable dual-core 64-bit CPU, 4 GB RAM and 32 GB free SSD space."
+      }
+    ],
+    "installation": {
+      "download": "https://elementary.io/",
+      "verification": "https://elementary.io/docs/installation",
+      "installation": "https://elementary.io/docs/installation"
+    }
+  },
+  {
+    "id": "pop-os",
+    "name": "Pop!_OS",
+    "version": "24.04 LTS",
+    "desktop": "COSMIC",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 4,
+      "storage_gb": 16
+    },
+    "categories": [
+      "general",
+      "development"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use. Desktop candidate for development workflows; verify each required tool.",
+    "sources": [
+      {
+        "url": "https://system76.com/download-pop/",
+        "checked_on": "2026-10-24",
+        "note": "Publisher recommends 4 GB RAM and 16 GB storage. Select the correct graphics image; Secure Boot must be disabled."
+      }
+    ],
+    "installation": {
+      "download": "https://system76.com/download-pop/",
+      "verification": "https://system76.com/download-pop/",
+      "installation": "https://system76.com/download-pop/"
+    }
+  },
+  {
+    "id": "mx-linux",
+    "name": "MX Linux",
+    "version": "25 series, Xfce image",
+    "desktop": "Xfce",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "lightweight",
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory. Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum_en.pdf",
+        "checked_on": "2026-10-24",
+        "note": "Official MX-25 user manual; edition-specific numeric requirements remain unverified in this catalog."
+      }
+    ],
+    "installation": {
+      "download": "https://mxlinux.org/download-links/",
+      "verification": "https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum_en.pdf",
+      "installation": "https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum_en.pdf"
+    }
+  },
+  {
+    "id": "q4os",
+    "name": "Q4OS Trinity",
+    "version": "6.10 Andromeda install-CD",
+    "desktop": "Trinity",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 0.512,
+      "storage_gb": 6,
+      "cpu_mhz": 500
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "lightweight"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory.",
+    "sources": [
+      {
+        "url": "https://www.q4os.org/downloads1.html",
+        "checked_on": "2026-10-24",
+        "note": "64-bit Trinity install-CD profile: 500 MHz CPU, 512 MB RAM, 6 GB disk. Live-media/browser workload may need substantially more."
+      }
+    ],
+    "installation": {
+      "download": "https://www.q4os.org/downloads1.html",
+      "verification": "https://www.q4os.org/downloads1.html",
+      "installation": "https://www.q4os.org/downloads1.html"
+    }
+  },
+  {
+    "id": "bodhi",
+    "name": "Bodhi Linux",
+    "version": "7.0 series, 64-bit image",
+    "desktop": "Moksha",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 0.768,
+      "storage_gb": 10
+    },
+    "categories": [
+      "lightweight"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory.",
+    "sources": [
+      {
+        "url": "https://www.bodhilinux.com/w/system-requirements/",
+        "checked_on": "2026-10-24",
+        "note": "Publisher 7.0 guidance mixes legacy 32-bit minimums with 64-bit recommendations. Avoid treating legacy minima as verified 64-bit installer requirements."
+      }
+    ],
+    "installation": {
+      "download": "https://www.bodhilinux.com/w/system-requirements/",
+      "verification": "https://www.bodhilinux.com/w/system-requirements/",
+      "installation": "https://www.bodhilinux.com/w/system-requirements/"
+    }
+  },
+  {
+    "id": "puppy",
+    "name": "Puppy Linux",
+    "version": "Publisher-selected 64-bit variant",
+    "desktop": "Variant-dependent",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "lightweight"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory.",
+    "sources": [
+      {
+        "url": "https://puppylinux-woof-ce.github.io/",
+        "checked_on": "2026-10-24",
+        "note": "Puppy is a family of distinct distributions. Choose a maintained 64-bit variant and verify its requirements; no family-wide numeric minimum is claimed."
+      }
+    ],
+    "installation": {
+      "download": "https://puppylinux-woof-ce.github.io/",
+      "verification": "https://puppylinux-woof-ce.github.io/",
+      "installation": "https://puppylinux-woof-ce.github.io/"
+    },
+    "additional_requirements": [
+      "Select a specific maintained image and verify browser/security updates and its own requirements."
+    ]
+  },
+  {
+    "id": "peppermint",
+    "name": "Peppermint OS",
+    "version": "Trixie Debian-base 64-bit image",
+    "desktop": "Xfce",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "lightweight",
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory. Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://peppermintos.com/trixie-base-downloads/",
+        "checked_on": "2026-10-24",
+        "note": "Official Debian/Devuan-base download choices. This record selects the Debian 64-bit image; numeric minimums remain unverified."
+      }
+    ],
+    "installation": {
+      "download": "https://peppermintos.com/trixie-base-downloads/",
+      "verification": "https://peppermintos.com/trixie-base-downloads/",
+      "installation": "https://peppermintos.com/trixie-base-downloads/"
+    }
+  },
+  {
+    "id": "bazzite",
+    "name": "Bazzite",
+    "version": "Rolling desktop image",
+    "desktop": "KDE Plasma",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 8,
+      "storage_gb": 50,
+      "cpu_mhz": 2000
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": 120
+    },
+    "categories": [
+      "gaming"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review."
+    ],
+    "description": "Gaming-oriented setup; individual games, GPU support and anti-cheat still need checking.",
+    "sources": [
+      {
+        "url": "https://docs.bazzite.gg/Gaming/Hardware_compatibility_for_gaming/",
+        "checked_on": "2026-10-24",
+        "note": "Desktop gaming requirements: 2 GHz quad-core x86-64 CPU, 8 GB RAM, Vulkan 1.3 GPU, 50 GB free internal SSD space; 120 GB recommended."
+      }
+    ],
+    "installation": {
+      "download": "https://bazzite.gg/",
+      "verification": "https://docs.bazzite.gg/Gaming/Hardware_compatibility_for_gaming/",
+      "installation": "https://docs.bazzite.gg/Gaming/Hardware_compatibility_for_gaming/"
+    },
+    "additional_requirements": [
+      "Quad-core CPU, Vulkan 1.3 GPU, UEFI firmware, GPT disk and internal SSD/free-space requirements need verification."
+    ]
+  },
+  {
+    "id": "nobara",
+    "name": "Nobara",
+    "version": "Publisher-selected Official image",
+    "desktop": "KDE Plasma",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": null,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "gaming",
+      "general"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Gaming-oriented setup; individual games, GPU support and anti-cheat still need checking. Everyday desktop for browsing, documents and general use.",
+    "sources": [
+      {
+        "url": "https://nobaraproject.org/download.html",
+        "checked_on": "2026-10-24",
+        "note": "Official gaming-oriented KDE image. UEFI and disabling Secure Boot are documented; numeric minima were not established. Not intended for critical production use."
+      }
+    ],
+    "installation": {
+      "download": "https://nobaraproject.org/download.html",
+      "verification": "https://nobaraproject.org/download.html",
+      "installation": "https://nobaraproject.org/download.html"
+    },
+    "additional_requirements": [
+      "Select the correct graphics image; UEFI and Secure Boot configuration need verification."
+    ]
+  },
+  {
+    "id": "garuda",
+    "name": "Garuda Linux",
+    "version": "Rolling KDE image",
+    "desktop": "KDE Plasma",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": 30,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "gaming",
+      "performance"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Gaming-oriented setup; individual games, GPU support and anti-cheat still need checking. Performance-oriented configuration and tuning; no measured speed advantage is claimed.",
+    "sources": [
+      {
+        "url": "https://wiki.garudalinux.org/en/system-requirements.md",
+        "checked_on": "2026-10-24",
+        "note": "Official requirements list 30 GB disk. Other numeric values remain unverified in this review; match the selected edition and CPU instruction support."
+      }
+    ],
+    "installation": {
+      "download": "https://wiki.garudalinux.org/en/system-requirements.md",
+      "verification": "https://wiki.garudalinux.org/en/system-requirements.md",
+      "installation": "https://wiki.garudalinux.org/en/system-requirements.md"
+    },
+    "additional_requirements": [
+      "Selected image CPU instruction extensions and graphics requirements need verification."
+    ]
+  },
+  {
+    "id": "cachyos",
+    "name": "CachyOS",
+    "version": "Rolling desktop image",
+    "desktop": "KDE Plasma",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 3,
+      "storage_gb": 30,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 8,
+      "storage_gb": 50
+    },
+    "categories": [
+      "performance",
+      "gaming",
+      "development"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review."
+    ],
+    "description": "Performance-oriented configuration and tuning; no measured speed advantage is claimed. Gaming-oriented setup; individual games, GPU support and anti-cheat still need checking.",
+    "sources": [
+      {
+        "url": "https://wiki.cachyos.org/installation/installation_prepare/",
+        "checked_on": "2026-10-24",
+        "note": "Minimum 3 GB RAM and 30 GB storage; recommended 8 GB RAM and 50 GB SSD. CPU instruction level, graphics and online installer requirements also apply."
+      }
+    ],
+    "installation": {
+      "download": "https://wiki.cachyos.org/installation/installation_prepare/",
+      "verification": "https://wiki.cachyos.org/installation/installation_prepare/",
+      "installation": "https://wiki.cachyos.org/installation/installation_prepare/"
+    },
+    "additional_requirements": [
+      "Verify x86-64 microarchitecture support against the selected image and ensure internet access for the online installer."
+    ]
+  },
+  {
+    "id": "opensuse",
+    "name": "openSUSE Tumbleweed",
+    "version": "Rolling x86_64 image",
+    "desktop": "KDE Plasma",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 2,
+      "storage_gb": null,
+      "cpu_mhz": 2000
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "general",
+      "development"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use. Desktop candidate for development workflows; verify each required tool.",
+    "sources": [
+      {
+        "url": "https://get.opensuse.org/tumbleweed/",
+        "checked_on": "2026-10-24",
+        "note": "Publisher specifies dual-core 2 GHz CPU, 2 GB RAM plus workload memory, and OVER 40 GB free disk. Strictly-over disk boundary is left manual rather than rounded to a fabricated minimum."
+      }
+    ],
+    "installation": {
+      "download": "https://get.opensuse.org/tumbleweed/",
+      "verification": "https://get.opensuse.org/tumbleweed/",
+      "installation": "https://get.opensuse.org/tumbleweed/"
+    },
+    "additional_requirements": [
+      "More than 40 GB free disk and a dual-core CPU must be verified for the installation target."
+    ]
+  },
+  {
+    "id": "ubuntu-mate",
+    "name": "Ubuntu MATE",
+    "version": "Publisher-selected supported amd64 image",
+    "desktop": "MATE",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 2,
+      "storage_gb": 10,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 4,
+      "storage_gb": 20
+    },
+    "categories": [
+      "general",
+      "lightweight"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use. Lean desktop candidate for older hardware and modest workloads; modern websites still need memory.",
+    "sources": [
+      {
+        "url": "https://ubuntu-mate.org/about/requirements/",
+        "checked_on": "2026-10-24",
+        "note": "Minimum Core 2 Duo amd64, 2 GB RAM and 10 GB HDD; recommended Core i3, 4 GB RAM and 20 GB SSD."
+      }
+    ],
+    "installation": {
+      "download": "https://ubuntu-mate.org/download/amd64/",
+      "verification": "https://ubuntu-mate.org/about/requirements/",
+      "installation": "https://ubuntu-mate.org/about/requirements/"
+    },
+    "additional_requirements": [
+      "Minimum CPU class is Core 2 Duo, not just a matching clock frequency."
+    ]
+  },
+  {
+    "id": "linux-lite",
+    "name": "Linux Lite",
+    "version": "8.0",
+    "desktop": "Xfce",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": 4,
+      "storage_gb": 40,
+      "cpu_mhz": 1500
+    },
+    "recommended": {
+      "memory_gb": null,
+      "storage_gb": null
+    },
+    "categories": [
+      "general",
+      "lightweight"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review."
+    ],
+    "description": "Everyday desktop for browsing, documents and general use. Lean desktop candidate for older hardware and modest workloads; modern websites still need memory.",
+    "sources": [
+      {
+        "url": "https://www.linuxliteos.com/download.php",
+        "checked_on": "2026-10-24",
+        "note": "Version 8.0 minimum: 1.5 GHz dual-core CPU, 4 GB memory, 40 GB storage. Older-version 1 GB guidance is not reused."
+      }
+    ],
+    "installation": {
+      "download": "https://www.linuxliteos.com/download.php",
+      "verification": "https://www.linuxliteos.com/download.php",
+      "installation": "https://www.linuxliteos.com/download.php"
+    },
+    "additional_requirements": [
+      "Dual-core CPU, display and Secure Boot settings need verification."
+    ]
+  },
+  {
+    "id": "antix",
+    "name": "antiX Full",
+    "version": "26.1, 64-bit image",
+    "desktop": "IceWM",
+    "family": "Linux",
+    "status": "sourced",
+    "architectures": [
+      "x86_64"
+    ],
+    "minimum": {
+      "memory_gb": null,
+      "storage_gb": 7,
+      "cpu_mhz": null
+    },
+    "recommended": {
+      "memory_gb": 0.512,
+      "storage_gb": null
+    },
+    "categories": [
+      "lightweight"
+    ],
+    "assumptions": [
+      "This record screens the named x86_64 image only. Desktop/application workload and driver support require separate review.",
+      "Unknown minimums are deliberately blank. Recommended values are guidance, not hard minimums."
+    ],
+    "description": "Lean desktop candidate for older hardware and modest workloads; modern websites still need memory.",
+    "sources": [
+      {
+        "url": "https://antixlinux.com/about/",
+        "checked_on": "2026-10-24",
+        "note": "Publisher describes 256 MB systems with swap and recommends at least 512 MB. 7 GB disk minimum. Low desktop RAM guidance is not a modern browser performance guarantee."
+      }
+    ],
+    "installation": {
+      "download": "https://antixlinux.com/download/",
+      "verification": "https://antixlinux.com/about/",
+      "installation": "https://antixlinux.com/about/"
+    }
+  }
+]
