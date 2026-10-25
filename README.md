@@ -1,8 +1,54 @@
-# ReviveOS
+# ReviveOS — Our Development Experience
 
-ReviveOS is a local web application that helps people assess an older computer, compare operating systems, back up files, and prepare for a manual installation. The same Flask backend and browser interface run on Windows, Linux, and a bootable Debian live environment.
+## Our Idea and Challenges
 
-The current recommendation catalog covers Linux. Windows preferences are available, but Windows compatibility checks are referred to Microsoft's official tools. No paid API key is required.
+Building ReviveOS was a fun and challenging experience. Throughout development, we encountered several problems, especially when trying to make our application boot and function properly on both Windows and Linux. This was one of our biggest initial challenges.
+
+Our main goal was to create a simple, easy-to-use application that wouldn't leave users confused or lost during the process of choosing and installing an operating system.
+
+We also wanted ReviveOS to help users recover from operating system failures. For example, if someone's Linux installation became corrupted or their computer could no longer boot, they could plug in a ReviveOS USB drive and launch a temporary Debian-based environment.
+
+From there, our vision was to let users recover their previous operating system, install a different one, or restart the installation process. We also explored the possibility of storing multiple operating systems directly on the USB drive, allowing users to choose between them without having to download everything again.
+
+## Hardware Detection Challenges
+
+Our second major challenge was accurately detecting computer specifications.
+
+Since ReviveOS recommends operating systems based on the user's hardware and preferences, getting accurate information about the CPU, RAM, storage, and other components was essential.
+
+We found that some methods of retrieving hardware information weren't always reliable across different operating systems.
+
+We wanted to minimize external dependencies and avoid requiring users to install additional applications just to make ReviveOS work.
+
+This pushed us to explore different approaches to hardware detection and improve how our backend handled system information.
+
+## How We Divided the Work
+
+**Sharan — Hardware Analysis and User Preferences**
+
+Sharan mainly worked on hardware analysis, user preferences, and parts of the frontend. This involved making sure ReviveOS could collect system specifications and understand what users wanted from their computers.
+
+**Ryan — OS Recommendations and Installation Assistance**
+
+Ryan mainly worked on operating system recommendations, installation assistance, and backup-related functionality. His focus was connecting these features so users could move through the process smoothly.
+
+## Technologies and What We Learned
+
+Most of ReviveOS was developed using Flask, Python, JavaScript, HTML, and CSS.
+
+Flask was relatively new to both of us, so working on this project helped us understand how frontend and backend systems communicate.
+
+We learned more about Python functions, JavaScript, API endpoints, and how different parts of an application connect together.
+
+We also used AI tools during development, particularly to speed up frontend development and help with repetitive code. We reviewed and supervised the generated output while working on our application.
+
+## Final Reflection
+
+ReviveOS helped us understand that building software isn't just about writing code. It also involves designing the user experience, solving compatibility problems, testing functionality, and making different systems work together.
+
+Although we encountered several challenges, the project gave us experience with technologies we were still learning and helped us better understand the process of developing a complete application.
+
+Our overall goal with ReviveOS was to make older computers useful again by simplifying operating system selection, installation, and recovery.
 
 ## What it does
 
@@ -79,15 +125,5 @@ reviveos/
 |-- bootable/                  Debian live image builder and boot checks
 |-- tools/                     Windows packaging and local AI preparation
 |-- requirements.txt           Flask and psutil runtime dependencies
-`-- requirements-dev.txt       Runtime dependencies plus PyInstaller
+|-- requirements-dev.txt       Runtime dependencies plus PyInstaller
 ```
-
-
-## Build a bootable Linux ISO
-
-Use a disposable Debian 13 amd64 build VM with at least 20 GB of free space:
-
-
-## Check application changes
-
-There is no general automated application test suite in the current tree. Launch the app and exercise the affected screens: save preferences, detect hardware, run optional benchmarks, compare results, and check the installation handoff. Use disposable sample files for backup checks and distinguish demo downloads from real downloads. The `bootable/` scripts provide separate live-image startup and VM checks.
